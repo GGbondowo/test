@@ -1,0 +1,12 @@
+print("你的 HUB 已載入成功！")
+
+-- 範例功能：加快動畫速度
+local plr = game.Players.LocalPlayer
+local hum = plr.Character:WaitForChild("Humanoid")
+
+while true do
+    task.wait(0.1)
+    for _, anim in pairs(hum.Animator:GetPlayingAnimationTracks()) do
+        anim:AdjustSpeed(2)     -- 2倍速度
+    end
+end
